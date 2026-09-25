@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live-in-Labs® Seasonal Calendar Matrix</title>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 5mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 8px;
+      color: #111827;
+      background: #ffffff;
+      font-size: 8px;
+      line-height: 1.15;
+    }
+    .header {
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 3px;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .title-block h1 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #1e3a8a;
+      margin: 0 0 1px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .title-block p {
+      margin: 0;
+      font-size: 7.8px;
+      color: #4b5563;
+    }
+    .legend {
+      font-size: 7.5px;
+      font-weight: 600;
+      color: #1f2937;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e5e7eb;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 2.2px 1.5px;
+      text-align: center;
+      vertical-align: middle;
+      word-wrap: break-word;
+      font-size: 7.2px;
+    }
+    th {
+      background-color: #f8fafc;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    th.col-cat {
+      width: 8%;
+      text-align: left;
+      padding-left: 3px;
+    }
+    th.col-ind {
+      width: 13%;
+      text-align: left;
+      padding-left: 3px;
+    }
+    th.col-m {
+      width: 6.58%;
+      font-size: 7.5px;
+    }
+    .month-sub {
+      display: block;
+      font-size: 6.5px;
+      font-weight: 500;
+      color: #475569;
+    }
+    td.cat-cell {
+      font-weight: 800;
+      text-align: left;
+      padding-left: 3px;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      border-right: 1.5px solid #94a3b8;
+    }
+    td.ind-cell {
+      text-align: left;
+      padding-left: 3px;
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #334155;
+    }
+    .peak {
+      font-weight: 800;
+      color: #b91c1c;
+      background-color: #fef2f2;
+    }
+    .high {
+      font-weight: 700;
+      color: #c2410c;
+    }
+    .water-peak {
+      font-weight: 800;
+      color: #0369a1;
+      background-color: #f0f9ff;
+    }
+    .agri-active {
+      font-weight: 700;
+      color: #15803d;
+    }
+    .fallow {
+      color: #94a3b8;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title-block">
+      <h1>Live-in-Labs® Seasonal Calendar Matrix</h1>
+      <p><strong>Village:</strong> Sellur Grama Panchayat (Thoppu Theru, Vadakku Theru, SC Colony) | <strong>District:</strong> Nagapattinam, Tamil Nadu | <strong>Team:</strong> Tech Saptadipah | <strong>Academic Year:</strong> B.Tech (Year 3, Sem 5)</p>
+    </div>
+    <div class="legend">
+      <strong>Scoring:</strong> ● Low/None &nbsp;|&nbsp; ●●● Moderate &nbsp;|&nbsp; <span style="color:#b91c1c;">●●●●● Peak/Extreme</span>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="col-cat">Dimension</th>
+        <th class="col-ind">Indicator</th>
+        <th class="col-m">Jan<span class="month-sub">Thai</span></th>
+        <th class="col-m">Feb<span class="month-sub">Maasi</span></th>
+        <th class="col-m">Mar<span class="month-sub">Panguni</span></th>
+        <th class="col-m">Apr<span class="month-sub">Chithirai</span></th>
+        <th class="col-m">May<span class="month-sub">Vaikasi</span></th>
+        <th class="col-m">Jun<span class="month-sub">Aani</span></th>
+        <th class="col-m">Jul<span class="month-sub">Aadi</span></th>
+        <th class="col-m">Aug<span class="month-sub">Aavani</span></th>
+        <th class="col-m">Sep<span class="month-sub">Purattasi</span></th>
+        <th class="col-m">Oct<span class="month-sub">Aippasi</span></th>
+        <th class="col-m">Nov<span class="month-sub">Karthigai</span></th>
+        <th class="col-m">Dec<span class="month-sub">Margazhi</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Climate -->
+      <tr>
+        <td rowspan="3" class="cat-cell">Climate</td>
+        <td class="ind-cell">Ambient Heat</td>
+        <td>●●</td>
+        <td>●●●</td>
+        <td class="high">●●●●</td>
+        <td class="peak">●●●●●</td>
+        <td class="peak">●●●●● (Agni)</td>
+        <td class="high">●●●●</td>
+        <td class="high">●●●●</td>
+        <td>●●●</td>
+        <td>●●●</td>
+        <td>●●</td>
+        <td>●●</td>
+        <td>●</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">NE Monsoon Rain</td>
+        <td>●</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td>● (Pre-monsoon)</td>
+        <td class="fallow">—</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●●</td>
+        <td class="water-peak">●●●●●</td>
+        <td class="water-peak">●●●●●</td>
+        <td class="high">●●●●</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Cyclone / Storm Risk</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td class="fallow">—</td>
+        <td>●</td>
+        <td class="high">●●●●</td>
+        <td class="peak">●●●●●</td>
+        <td>●●●</td>
+      </tr>
+
+      <!-- Water -->
+      <tr>
+        <td rowspan="4" class="cat-cell">Water</td>
+        <td class="ind-cell">Cauvery Canal Flow</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+        <td class="water-peak">Opens (Kuruvai)</td>
+        <td class="water-peak">●●●●● (Peak)</td>
+        <td>Drops/Shuts</td>
+        <td class="fallow">Dry</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+        <td class="fallow">Closed</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Groundwater Depth</td>
+        <td>Shallow</td>
+        <td>Moderate</td>
+        <td>Deep</td>
+        <td class="high">Deepest</td>
+        <td class="peak">Deepest</td>
+        <td>Deep</td>
+        <td>Recharging</td>
+        <td>Shallow</td>
+        <td>Shallow</td>
+        <td>Full/Recharged</td>
+        <td>Full</td>
+        <td>Full</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Groundwater Salinity</td>
+        <td>High</td>
+        <td>High</td>
+        <td class="high">Very High</td>
+        <td class="peak">Extreme</td>
+        <td class="peak">Extreme</td>
+        <td class="high">High</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td>Diluted/Low</td>
+        <td>Low</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Drinking Water Scarcity</td>
+        <td>●●●</td>
+        <td>●●●</td>
+        <td class="high">●●●●</td>
+        <td class="peak">●●●●●</td>
+        <td class="peak">●●●●●</td>
+        <td class="high">●●●●</td>
+        <td class="high">●●●●</td>
+        <td class="high">●●●●</td>
+        <td>●●●</td>
+        <td>●●</td>
+        <td>●</td>
+        <td>●●</td>
+      </tr>
+
+      <!-- Agriculture -->
+      <tr>
+        <td rowspan="5" class="cat-cell">Agriculture</td>
+        <td class="ind-cell">Cotton Cycle</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow/Prep</td>
+        <td class="agri-active">Seeding Starts</td>
+        <td>Growing</td>
+        <td class="peak">Harvesting</td>
+        <td class="fallow">Field Clearing</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Paddy / Rice</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td>Nursery/Prep</td>
+        <td class="agri-active">Sowing Starts</td>
+        <td class="agri-active">Sowing/Nursery</td>
+        <td class="agri-active">Transplanting</td>
+        <td class="peak">Harvesting</td>
+        <td class="peak">Harvesting</td>
+        <td class="fallow">Post-Harvest</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Urad Dal</td>
+        <td class="agri-active">Sowing Starts</td>
+        <td>Growing</td>
+        <td class="peak">Harvesting</td>
+        <td class="peak">Harvesting</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Moong Dal</td>
+        <td class="agri-active">Sowing Starts</td>
+        <td>Growing</td>
+        <td class="peak">Harvesting</td>
+        <td class="peak">Harvesting</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+        <td class="fallow">Fallow</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Snails / Field Pests</td>
+        <td class="fallow">Dormant</td>
+        <td class="fallow">Dormant</td>
+        <td class="fallow">Dormant</td>
+        <td class="fallow">Dormant</td>
+        <td class="fallow">Dormant</td>
+        <td class="water-peak">High (Water)</td>
+        <td class="water-peak">High (Water)</td>
+        <td class="water-peak">Peak (Water)</td>
+        <td class="water-peak">High (Water)</td>
+        <td class="water-peak">High (Floods)</td>
+        <td class="water-peak">Present (Rains)</td>
+        <td class="water-peak">Decreasing</td>
+      </tr>
+
+      <!-- Livestock -->
+      <tr>
+        <td rowspan="3" class="cat-cell">Livestock</td>
+        <td class="ind-cell">Cow Milk Yield</td>
+        <td class="water-peak">●●●●● (Peak)</td>
+        <td>●●●●</td>
+        <td>●●●</td>
+        <td>●●</td>
+        <td class="high">● (Lowest)</td>
+        <td>●</td>
+        <td>●●</td>
+        <td>●●●</td>
+        <td>●●●●</td>
+        <td class="water-peak">●●●●●</td>
+        <td class="water-peak">●●●●●</td>
+        <td class="water-peak">●●●●</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Green Fodder Supply</td>
+        <td>Abundant</td>
+        <td>Abundant</td>
+        <td>Drying</td>
+        <td class="high">Scarse</td>
+        <td class="peak">Severe Scarcity</td>
+        <td>Sprouts</td>
+        <td>Canal Grass</td>
+        <td>Available</td>
+        <td>Available</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td>Abundant</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Cattle Heat Stress</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Moderate</td>
+        <td class="high">Severe</td>
+        <td class="peak">Extreme</td>
+        <td class="high">Severe</td>
+        <td>Moderate</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Foot Rot Risk</td>
+        <td>Low</td>
+      </tr>
+
+      <!-- Livelihood -->
+      <tr>
+        <td rowspan="4" class="cat-cell">Livelihood</td>
+        <td class="ind-cell">Farm Labor Demand</td>
+        <td class="peak">●●●●● (High Peak)</td>
+        <td>●●</td>
+        <td class="fallow">—</td>
+        <td>● (Cotton Sow)</td>
+        <td>●</td>
+        <td class="high">●●●● (Cotton Harv)</td>
+        <td>●●</td>
+        <td>●● (Rice Nursery)</td>
+        <td class="high">●●●● (Transplant)</td>
+        <td class="peak">●●●●● (Harv)</td>
+        <td class="peak">●●●●● (High Peak)</td>
+        <td class="peak">●●●●● (High Peak)</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Outward Migration</td>
+        <td>●</td>
+        <td>●●</td>
+        <td class="high">●●●●</td>
+        <td class="peak">●●●●● (Peak)</td>
+        <td class="peak">●●●●●</td>
+        <td>●●●</td>
+        <td>●●●</td>
+        <td>●●●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+        <td>●</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">MGNREGA Demand</td>
+        <td>Moderate</td>
+        <td>High</td>
+        <td class="peak">●●●●● (Peak)</td>
+        <td class="peak">●●●●●</td>
+        <td class="peak">●●●●●</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Moderate</td>
+        <td>Low</td>
+        <td>High</td>
+        <td>High</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Traditional Astrology</td>
+        <td>Traveling</td>
+        <td>Traveling</td>
+        <td class="high">Peak Travel</td>
+        <td>Camp Return</td>
+        <td>Local Fairs</td>
+        <td>Traveling</td>
+        <td>Traveling</td>
+        <td>Camp Return</td>
+        <td>Traveling</td>
+        <td>Base Camp</td>
+        <td>Base Camp</td>
+        <td>Traveling</td>
+      </tr>
+
+      <!-- Finance -->
+      <tr>
+        <td rowspan="2" class="cat-cell">Finance</td>
+        <td class="ind-cell">Household Cash Inflow</td>
+        <td class="agri-active">High (Dal/Labor)</td>
+        <td>Low</td>
+        <td class="agri-active">Moderate (Dal)</td>
+        <td class="peak">Severe Lean</td>
+        <td class="peak">Severe Lean</td>
+        <td class="agri-active">High (Cotton)</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td class="agri-active">High (Rice)</td>
+        <td class="agri-active">High (Rice/Labor)</td>
+        <td>Low/Lean</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Debt &amp; Borrowing</td>
+        <td>Low</td>
+        <td class="peak">High (Marriages)</td>
+        <td class="peak">High (Functions)</td>
+        <td class="peak">Peak Debt</td>
+        <td class="high">High</td>
+        <td class="high">High</td>
+        <td>Moderate</td>
+        <td>Moderate</td>
+        <td>Repayments</td>
+        <td>Rising</td>
+        <td>Rising</td>
+        <td>Rising</td>
+      </tr>
+
+      <!-- Health -->
+      <tr>
+        <td rowspan="2" class="cat-cell">Health</td>
+        <td class="ind-cell">Dehydration / Sunstroke</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Moderate</td>
+        <td class="peak">Extreme</td>
+        <td class="peak">Extreme</td>
+        <td class="high">High</td>
+        <td class="high">High</td>
+        <td>Moderate</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td class="ind-cell">Waterborne / Diarrhea</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td>Low</td>
+        <td class="peak">●●●●● (Floods)</td>
+        <td class="peak">●●●●● (Floods)</td>
+        <td>Moderate</td>
+      </tr>
+
+      <!-- Culture -->
+      <tr>
+        <td class="cat-cell">Culture</td>
+        <td class="ind-cell">Village Festivals</td>
+        <td><strong>Pongal</strong> (Thai)</td>
+        <td><strong>Maha Shivaratri</strong> (Big Fest) &amp; Sadachhi Amman</td>
+        <td class="fallow">-</td>
+        <td>Tamil New Year</td>
+        <td class="fallow">-</td>
+        <td>Aadi Perukku</td>
+        <td><strong>Mariamman Theru</strong></td>
+        <td><strong>Kaliamman Theru</strong> (10 days after)</td>
+        <td>Krishna Jayanti</td>
+        <td><strong>Deepavali</strong></td>
+        <td>Karthigai Deepam &amp; Mala: Ayyappa, Om Shakthi, Murugan</td>
+        <td>Mandala Pooja</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
